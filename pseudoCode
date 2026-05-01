@@ -1,0 +1,15 @@
+App will have a state and two parent sections editor and preview. 
+Editor will have four forms as parent section and each will:
+        update the main state on every change in input
+        create and append the same form by clicking on to the new button
+        delete the whole form and clear all the data associated with it
+Preview will take the data as prop and
+        show all the values in UI in the form of jsx using loop so that each component shoud be rendered successfully
+        If there is any change in data, preview will be called
+
+personalinfoform will return a form and on click it, it will put its information into the main state. 
+(to put inputs data into main state, there should be a function in it which will be called on click)'
+
+How to select the values of multiple objects. 
+I need to write the handleChange function accordingly. firstly it will show the ...prev and secodnaly it will select the current object. lets say I describe a variable for that which will select the object accrding to index. 
+ 
