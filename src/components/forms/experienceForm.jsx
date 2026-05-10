@@ -1,7 +1,8 @@
+import { styles } from "../styles.jsx";
 export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
   return (
-    <div>
+    <div className={styles.formWrapper}>
       <label htmlFor="title">Title</label>
       <input
         type="text"

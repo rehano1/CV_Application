@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PersonalDetailsForm from "./forms/personalDetailsForm"
 import FormList from "./forms/formList.jsx";
+import { styles } from "./styles.jsx";
 export default function Editor ({personalData, setPersonalData, otherData, setotherData, addEntry, deleteEntry}) {
 
     const [activeForm, setactiveForm] = useState("personal");
@@ -24,7 +25,7 @@ export default function Editor ({personalData, setPersonalData, otherData, setot
   }
     
     return (
-     <div className="editor">
+     <div className={styles.flexWrapper}>
       <nav>
         {sections.map(s =>(
           <button
