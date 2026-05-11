@@ -25,17 +25,22 @@ export default function Editor ({personalData, setPersonalData, otherData, setot
   }
     
     return (
-     <div className={styles.flexWrapper}>
-      <nav>
+     <div className={styles.flexWrapperForDiv}>
+      <div>
+  
         {sections.map(s =>(
           <button
           key={s.id}
-          className={activeForm === s.id ? "active" : ""}
+          className={styles.btnStyles}
           onClick={()=> setactiveForm(s.id)}>
             {s.label}
          </button>
         ))}
-      </nav>
+
+      </div>
+
+      <div className={styles.flexWrapperForDiv}>
+
       {activeForm === "personal" && (
         <PersonalDetailsForm personalData={personalData} setPersonalData={setPersonalData}/>
       )}
@@ -47,6 +52,7 @@ export default function Editor ({personalData, setPersonalData, otherData, setot
         handleOtherDataChange={handleOtherDataChange}
         activeForm={activeForm}/>
       )}
+      </div>
      </div>
     );
 }

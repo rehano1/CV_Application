@@ -2,9 +2,11 @@ import { styles } from "../styles.jsx";
 export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
   return (
-    <div className={styles.formWrapper}>
+    <>
+    <form className={styles.formWrapper}>
       <label htmlFor="title">Title</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="title"
         name="title"
@@ -15,6 +17,7 @@ export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="company">Company</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="company"
         name="company"
@@ -25,6 +28,7 @@ export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="city">City</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="city"
         name="city"
@@ -35,6 +39,7 @@ export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="startDate">Start Date</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="startDate"
         name="startDate"
@@ -45,6 +50,7 @@ export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="endDate">End Date</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="endDate"
         name="endDate"
@@ -55,12 +61,14 @@ export default function ExperienceForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="description">Description</label>
       <textarea
+        className={styles.inputStyle}
         id="description"
         name="description"
         value={entry.description}
         onChange={(e) => handleOtherDataChange(e, "experience", entry.id)}
         required
       />
-    </div>
+    </form>
+    </>
   );
 }

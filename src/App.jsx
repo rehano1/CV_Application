@@ -4,7 +4,7 @@ import Preview from "./components/preview.jsx";
 import { personal, other }   from "./components/data";
 import Editor from "./components/editor.jsx"
 import { v4 as uuidv4 } from 'uuid';
-
+import { styles } from "./components/styles.jsx";
 
 export default function App() {
   const [personalData, setpersonalData] = useState(personal);
@@ -72,8 +72,11 @@ export default function App() {
 
   return (
     <>
+    <div className={styles.flexWrapperForMainDiv}>
     <Editor personalData={personalData} setPersonalData={handlePersonalDataChange} otherData={otherData} setotherData={setotherData} addEntry={addEntry} deleteEntry={deleteEntry}/>
     <Preview personalData={personalData} otherData={otherData}/>
+
+    </div>
     </>
       
   )

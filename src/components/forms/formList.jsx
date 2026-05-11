@@ -1,11 +1,13 @@
 import Editor from "../editor"
 import EducationForm from "./educationForm.jsx";
 import ExperienceForm from "./experienceForm.jsx"
+import { styles } from "../styles.jsx";
+
 export default function FormList ({otherData, handleOtherDataChange, activeForm, addEntry, deleteEntry}) {
    
 
     return (
-        <div>
+        <div className={styles.flexWrapperForDiv}>
         <div>
            {activeForm === "education" && otherData.education.map((entry) => (
             <div key={entry.id}>

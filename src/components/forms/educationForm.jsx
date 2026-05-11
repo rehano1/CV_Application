@@ -1,9 +1,13 @@
+import { styles } from "../styles.jsx"
 export default function EducationForm({ entry, handleOtherDataChange }) {
 
   return (
-    <div>
+    <div className={styles.flexWrapperForDiv}>
+      <form action="submit" className={styles.formWrapper}>
+
       <label htmlFor="degree">Degree</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="degree"
         name="degree"
@@ -14,6 +18,7 @@ export default function EducationForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="institution">Institution</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="institution"
         name="institution"
@@ -24,6 +29,7 @@ export default function EducationForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="city">City</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="city"
         name="city"
@@ -34,6 +40,7 @@ export default function EducationForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="startDate">Start Date</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="startDate"
         name="startDate"
@@ -44,6 +51,7 @@ export default function EducationForm({ entry, handleOtherDataChange }) {
 
       <label htmlFor="endDate">End Date</label>
       <input
+        className={styles.inputStyle}
         type="text"
         id="endDate"
         name="endDate"
@@ -51,6 +59,7 @@ export default function EducationForm({ entry, handleOtherDataChange }) {
         onChange={(e) => handleOtherDataChange(e, "education", entry.id)}
         required
       />
+      </form>
     </div>
   );
 }
