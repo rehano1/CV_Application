@@ -1,7 +1,8 @@
 
-export default function Preview ({personalData, otherData}) {
+import { forwardRef } from 'react';
+const Preview = forwardRef (({personalData, otherData}, ref) =>  {
     return (
-        <div>
+        <div ref={ref}>
         {/* div for the first section personalDetails  */}
         <div>
         <h1>{personalData.firstName} {personalData.lastName}</h1>
@@ -58,5 +59,7 @@ export default function Preview ({personalData, otherData}) {
              </div>
 
         </div>
-    )
-}
+    );
+});
+
+export default Preview;

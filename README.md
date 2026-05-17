@@ -1,16 +1,109 @@
-# React + Vite
+# CV Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based CV builder that lets you create, edit, and download a professional CV as a PDF — all in the browser, no account needed.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Live-edit your CV with an intuitive form-based editor
+- Add and remove entries across multiple sections (Experience, Education, and more)
+- Instant preview that updates as you type
+- Download your CV as a PDF with a single click
+- Clean, minimal UI focused on content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — component-based UI
+- **JavaScript (ES6+)**
+- **CSS** — custom styling
+- **PDF generation** — browser-based download
+
+---
+
+## Project Structure
+
+```
+src/
+├── App.jsx          # Root component — holds global CV state
+├── Editor/
+│   ├── Editor.jsx   # Left panel — renders all editable sections
+│   ├── Section.jsx  # Wrapper for each CV section (Experience, Education, etc.)
+│   ├── FormList.jsx # Renders a list of form entries within a section
+│   └── Forms.jsx    # Individual form fields for each entry
+└── index.js
+```
+
+### Component Hierarchy
+
+```
+App
+└── Editor
+    └── Section
+        └── FormList
+            └── Forms
+```
+
+State lives in `App` and flows down via props. Add/delete handlers are defined in `App` and passed down to the relevant child components.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or above)
+- npm or yarn
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/cv-maker.git
+cd cv-maker
+npm install
+```
+
+### Run Live
+
+https://cv-application-self-phi.vercel.app/
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## Usage
+
+1. Fill in your personal details at the top.
+2. Use the **Experience** and **Education** sections to add relevant entries.
+3. Click **Add** to insert a new entry or the **delete** icon to remove one.
+4. Your CV preview updates in real time.
+5. Click **Download PDF** to save your CV.
+
+---
+
+## Roadmap
+
+- [ ] Multiple CV templates
+- [ ] Drag-and-drop section reordering
+- [ ] Local storage persistence
+- [ ] Export to DOCX
+- [ ] Dark mode
+
+---
+
+## License
+
+ Free to use and modify.
+
+---
+
+## Author
+
+**Rehan**
+Chemistry Teacher | Full Stack AI-Integrated React Developer |  

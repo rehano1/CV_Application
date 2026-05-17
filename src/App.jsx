@@ -5,10 +5,11 @@ import { personal, other }   from "./components/data";
 import Editor from "./components/editor.jsx"
 import { v4 as uuidv4 } from 'uuid';
 import { styles } from "./components/styles.jsx";
-
+import { usePDF } from "react-to-pdf";
 export default function App() {
   const [personalData, setpersonalData] = useState(personal);
   const [otherData, setotherData] = useState(other);
+  const { toPDF, targetRef } = usePDF({ filename: "cv.pdf"})
 
   
   function handlePersonalDataChange (e) {
@@ -74,8 +75,8 @@ export default function App() {
     <>
     <div className={styles.flexWrapperForMainDiv}>
     <Editor personalData={personalData} setPersonalData={handlePersonalDataChange} otherData={otherData} setotherData={setotherData} addEntry={addEntry} deleteEntry={deleteEntry}/>
-    <Preview personalData={personalData} otherData={otherData}/>
-
+    <Preview personalData={personalData} otherData={otherData} ref={targetRef}/>
+    <button onClick={() => toPDF()}>Download PDF</button>
     </div>
     </>
       
