@@ -106,4 +106,4 @@ npm run build
 ## Author
 
 **Rehan**
-Chemistry Teacher | Full Stack AI-Integrated React Developer |  
+Chemistry Teacher | Full Stack AI-Integrated React Developer |  rehan.ashraf179@gmail.com
